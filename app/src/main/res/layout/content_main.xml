@@ -25,7 +25,7 @@
         android:layout_width="128dp"
         android:layout_height="98dp"
         android:onClick="ButtonPressed"
-        android:text="Button"
+        android:text="Grade Calculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.18"
@@ -39,7 +39,7 @@
         android:layout_height="99dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
-        android:text="Button"
+        android:text="GPA Calculator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
