@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MobileCalculator</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="credits">
+        <item>0.0</item>
+        <item>0.5</item>
+        <item>1.0</item>
+    </string-array>
 </resources>

@@ -27,4 +27,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, GradeCalculator.class));
     }
 
+    public void openGPACalc(View BigButton2){
+        startActivity(new Intent(MainActivity.this, GPACalculator.class));
+    }
+
 }
