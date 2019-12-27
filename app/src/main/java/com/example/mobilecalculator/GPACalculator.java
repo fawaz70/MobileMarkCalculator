@@ -10,79 +10,98 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+
 public class GPACalculator extends AppCompatActivity {
-    private Float gpa1,gpa2,gpa3,gpa4,gpa5,gpa6;
-    private Float c1,c2,c3,c4,c5,c6;
-    private Spinner credit1,credit2,credit3,credit4,credit5,credit6;
+    public static Spinner[] gpaContainers;
+    public static Spinner[] creditContainers;
     private Button getGPAButton;
-    private TextView currGPA;
+    private TextView overallGPA;
+
+    private static DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gpacalculator);
-        credit1 = (Spinner) findViewById(R.id.credit1);
-        credit2 = (Spinner) findViewById(R.id.credit2);
-        credit3 = (Spinner) findViewById(R.id.credit3);
-        credit4 = (Spinner) findViewById(R.id.credit4);
-        credit5 = (Spinner) findViewById(R.id.credit5);
-        credit6 = (Spinner) findViewById(R.id.credit6);
 
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(GPACalculator.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.credits));
-
-        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        credit1.setAdapter(myAdapter); credit2.setAdapter(myAdapter); credit3.setAdapter(myAdapter);
-        credit4.setAdapter(myAdapter); credit5.setAdapter(myAdapter); credit6.setAdapter(myAdapter);
+        setGPASpinners(); setCreditSpinners();
 
         getGPAButton = (Button) findViewById(R.id.getGPA);
-        currGPA = (TextView) findViewById(R.id.currGPA);
+        overallGPA = (TextView) findViewById(R.id.overallGPA);
 
         getGPAButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get all the gpas from the text fields
-                this.assignGPAs();
-
-                // Get all the credits from the spinner
-                this.assignCredits();
-
-                Float[] credits = {c1,c2,c3,c4,c5,c6};
-                Float[] gpa = {gpa1,gpa2,gpa3,gpa4,gpa5,gpa6};
+                Float currGPA; Float currCred;
                 Float gpa_sum = 0.0f;
-                Integer num_courses = credits.length;
-                for (int i = 0; i<credits.length; i++) {
-                    if (credits[i] == 0.0f) {
-                        num_courses += -1;
-                    } else {
-                        if (credits[i] == 1.0) {
-                            gpa_sum += gpa[i]*2;
-                        } else {gpa_sum += gpa[i];}
+                Integer num_courses = gpaContainers.length;
+                for (int i = 0; i<gpaContainers.length; i++) {
+                    currGPA = Float.parseFloat(gpaContainers[i].getSelectedItem().toString().substring(0,3));
+                    System.out.println(currGPA);
+                    currCred = Float.parseFloat(creditContainers[i].getSelectedItem().toString());
+
+                    if (currCred == 0.0) {num_courses += -1;}
+                    else {
+                        if (currCred == 1.0) {gpa_sum += currGPA*2; num_courses += 1;}
+                        else {gpa_sum += currGPA;}
                     }
                 }
-                Float overall = gpa_sum/num_courses;
 
-                currGPA.setText(overall.toString());
-            }
+                Float overall = 0.0f;
+                if (num_courses != 0) { overall=gpa_sum/num_courses;}
 
-            public void assignGPAs(){
-                gpa1 = Float.parseFloat(((EditText) findViewById(R.id.GPA1)).getText().toString());
-                gpa2 = Float.parseFloat(((EditText) findViewById(R.id.GPA2)).getText().toString());
-                gpa3 = Float.parseFloat(((EditText) findViewById(R.id.GPA3)).getText().toString());
-                gpa4 = Float.parseFloat(((EditText) findViewById(R.id.GPA4)).getText().toString());
-                gpa5 = Float.parseFloat(((EditText) findViewById(R.id.GPA5)).getText().toString());
-                gpa6 = Float.parseFloat(((EditText) findViewById(R.id.GPA6)).getText().toString());
-            }
-
-            public void assignCredits(){
-                c1 = Float.parseFloat(credit1.getSelectedItem().toString());
-                c2 = Float.parseFloat(credit2.getSelectedItem().toString());
-                c3 = Float.parseFloat(credit3.getSelectedItem().toString());
-                c4 = Float.parseFloat(credit4.getSelectedItem().toString());
-                c5 = Float.parseFloat(credit5.getSelectedItem().toString());
-                c6 = Float.parseFloat(credit6.getSelectedItem().toString());
+                overallGPA.setText(df.format(overall));
             }
         });
+
+    }
+
+    public void setGPASpinners(){
+        Spinner sgpa1,sgpa2,sgpa3,sgpa4,sgpa5,sgpa6,sgpa7,sgpa8;
+
+        sgpa1 = findViewById(R.id.GPA1);
+        sgpa2 = findViewById(R.id.GPA2);
+        sgpa3 = findViewById(R.id.GPA3);
+        sgpa4 = findViewById(R.id.GPA4);
+        sgpa5 = findViewById(R.id.GPA5);
+        sgpa6 = findViewById(R.id.GPA6);
+        sgpa7 = findViewById(R.id.GPA7);
+        sgpa8 = findViewById(R.id.GPA8);
+
+        ArrayAdapter<String> myGPAAdapter = new ArrayAdapter<String>(GPACalculator.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.gpasUTSC));
+        myGPAAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        gpaContainers = new Spinner[] {sgpa1,sgpa2,sgpa3,sgpa4,sgpa5,sgpa6,sgpa7,sgpa8};
+
+        for (int i = 0; i < gpaContainers.length; i++){
+            gpaContainers[i].setAdapter(myGPAAdapter);
+        }
+    }
+
+    public void setCreditSpinners(){
+        Spinner credit1,credit2,credit3,credit4,credit5,credit6,credit7,credit8;
+
+        credit1 = findViewById(R.id.credit1);
+        credit2 = findViewById(R.id.credit2);
+        credit3 = findViewById(R.id.credit3);
+        credit4 = findViewById(R.id.credit4);
+        credit5 = findViewById(R.id.credit5);
+        credit6 = findViewById(R.id.credit6);
+        credit7 = findViewById(R.id.credit7);
+        credit8 = findViewById(R.id.credit8);
+
+        ArrayAdapter<String> myCredAdapter = new ArrayAdapter<String>(GPACalculator.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.credits));
+        myCredAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        creditContainers = new Spinner[] {credit1,credit2,credit3,credit4,credit5,credit6,credit7,credit8};
+
+        for (int i = 0; i < creditContainers.length; i++){
+            creditContainers[i].setAdapter(myCredAdapter);
+        }
 
     }
 }
