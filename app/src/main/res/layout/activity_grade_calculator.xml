@@ -75,7 +75,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent1"
@@ -83,7 +84,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -104,7 +106,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent2"
@@ -112,7 +115,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +137,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent3"
@@ -141,7 +146,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -162,7 +168,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent4"
@@ -170,7 +177,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -191,7 +199,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent5"
@@ -199,7 +208,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -220,7 +230,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent6"
@@ -228,7 +239,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -249,7 +261,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent7"
@@ -257,7 +270,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -278,7 +292,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent8"
@@ -286,7 +301,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -307,7 +323,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent9"
@@ -315,7 +332,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
             <LinearLayout
@@ -329,14 +347,15 @@
                 android:persistentDrawingCache="scrolling">
 
                 <EditText
-                    android:id="@+id/grade1"
+                    android:id="@+id/grade10"
                     android:layout_width="180dp"
                     android:layout_height="56dp"
                     android:layout_marginStart="48dp"
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
 
                 <EditText
                     android:id="@+id/percent10"
@@ -344,11 +363,31 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="140dp"
+        android:layout_height="86dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/average1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/average1"
+        android:layout_width="236dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
