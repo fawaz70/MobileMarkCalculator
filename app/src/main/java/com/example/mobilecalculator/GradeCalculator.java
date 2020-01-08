@@ -32,8 +32,8 @@ public class GradeCalculator extends AppCompatActivity {
         EditText grade1, grade2, grade3, grade4, grade5, grade6, grade7, grade8, grade9, grade10;
         EditText percent1, percent2, percent3, percent4, percent5, percent6, percent7, percent8,
                 percent9, percent10;
-        float mark = 0, current = 0;
-        double roundOff;
+        float mark = 0.0f, current = 0.0f;
+        double roundOff = 0.0d;
         grade1 = (EditText) findViewById(R.id.grade1);
         grade2 = (EditText) findViewById(R.id.grade2);
         grade3 = (EditText) findViewById(R.id.grade3);
@@ -60,15 +60,26 @@ public class GradeCalculator extends AppCompatActivity {
                 percent7,percent8,percent9,percent10};
 
         for(int i=0; i<10; i++){
-            if(Float.parseFloat(percentages[i].getText().toString()) != 0){
-                mark += Float.parseFloat(grades[i].getText().toString())
-                        * (Float.parseFloat(percentages[i].getText().toString()) / 100);
-                current += Float.parseFloat(percentages[i].getText().toString());
+            if (percentages[i].getText().toString().length() > 0 &&
+                     grades[i].getText().toString().length() > 0) {
+                if(Float.parseFloat(percentages[i].getText().toString()) > 0){
+                    mark += Float.parseFloat(grades[i].getText().toString())
+                            * (Float.parseFloat(percentages[i].getText().toString()) / 100);
+                    current += Float.parseFloat(percentages[i].getText().toString());
+                }
             }
         }
-        roundOff = Math.round((mark / current) * 100);
-        String end = "Average is " + String.valueOf(roundOff) + "% of "
-                + String.valueOf(current) + "% done";
+        if(current > 0) {
+            roundOff = Math.round((mark / current) * 100);
+        }
+        String end = "";
+        if(roundOff <= 100 && roundOff >= 0) {
+            end = "Average is " + String.valueOf(roundOff) + "% of "
+                    + String.valueOf(current) + "% done";
+        }
+        else{
+            end = "Grade isn't below 100";
+        }
         return end;
     }
 

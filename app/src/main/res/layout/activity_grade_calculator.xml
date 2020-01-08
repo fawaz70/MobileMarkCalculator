@@ -10,44 +10,47 @@
         android:id="@+id/percentage"
         android:layout_width="135dp"
         android:layout_height="54dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="       %"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.273"
-        app:layout_constraintStart_toEndOf="@+id/Grade"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
 
     <TextView
         android:id="@+id/Grade"
         android:layout_width="135dp"
         android:layout_height="54dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="   Grade"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
 
     <ScrollView
-        android:layout_width="375dp"
-        android:layout_height="338dp"
+        android:id="@+id/scrollView3"
+        android:layout_width="344dp"
+        android:layout_height="206dp"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:fillViewport="true"
         android:persistentDrawingCache="scrolling"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -75,8 +78,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent1"
@@ -84,8 +87,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -106,8 +109,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent2"
@@ -115,8 +118,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -137,8 +140,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent3"
@@ -146,8 +149,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -168,8 +171,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent4"
@@ -177,8 +180,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -199,8 +202,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent5"
@@ -208,8 +211,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -230,8 +233,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent6"
@@ -239,8 +242,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -261,8 +264,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent7"
@@ -270,8 +273,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -292,8 +295,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent8"
@@ -301,8 +304,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -323,8 +326,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent9"
@@ -332,8 +335,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
             <LinearLayout
@@ -354,8 +357,8 @@
                     android:layout_marginLeft="48dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/percent10"
@@ -363,8 +366,8 @@
                     android:layout_height="56dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:inputType="numberDecimal"
-                    android:text="0"/>
+                    android:hint="0"
+                    android:inputType="numberDecimal" />
             </LinearLayout>
 
         </LinearLayout>
@@ -375,19 +378,24 @@
         android:id="@+id/calculate_button"
         android:layout_width="140dp"
         android:layout_height="86dp"
+        android:layout_marginTop="25dp"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/average1"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/average1"
         android:layout_width="236dp"
         android:layout_height="80dp"
+        android:layout_marginTop="25dp"
         android:gravity="center"
         android:text=""
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
